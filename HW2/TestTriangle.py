@@ -45,7 +45,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3,0,5),'InvalidInput','A side cannot be 0 or less')
 
     def testInvalidB(self):
-        self.assertEqual(classifyTriangle(150,150,200),'InvalidInput','A side cannot be greater than 200')
+        self.assertEqual(classifyTriangle(150,150,201),'InvalidInput','A side cannot be greater than 200')
 
 if __name__ == '__main__':
     print('Running unit tests')
