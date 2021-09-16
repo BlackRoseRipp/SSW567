@@ -41,6 +41,12 @@ class TestTriangles(unittest.TestCase):
     def testIsoscelesTriangleB(self):
         self.assertEqual(classifyTriangle(3,3,5),'Isosceles','3,4,3 should be isosceles')
 
+    def testInvalidA(self):
+        self.assertEqual(classifyTriangle(3,0,5),'InvalidInput','A side cannot be 0 or less')
+
+    def testInvalidB(self):
+        self.assertEqual(classifyTriangle(150,150,200),'InvalidInput','A side cannot be greater than 200')
+
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main()
